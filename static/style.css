@@ -1,0 +1,213 @@
+* {
+  /* 박스 사이즈를 패딩 마진 포함해서 계산하겠다 + 폰트 */
+  box-sizing: border-box;
+}
+
+body {
+  /* 기본 여백 없애기 */
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  /* 모든 리스트 앞에 점과 여백 없애기 */
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  /* 헤더 영역 콘테이너 (로고, 메뉴, 프로필) */
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+
+.header-ul {
+  /* 헤더 가로 배치 및 여백 길이 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo {
+  /* 로고와 헤더 ul 간격 */
+  margin-right: 20px;
+}
+
+.header-ul li {
+  /* 폰트크기는 15px, 굵기 500, 색상 #000000 */
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+}
+
+#name {
+  /* 내 프로필 속 이름
+    폰트 사이즈 10px, 굵기 300, 색상 #444444 */
+  font-size: 10px;
+  font-weight: 300;
+  color: #444444;
+}
+
+#profile-img {
+  /* 프로필 사진 */
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#profile-img img {
+  /* 이미지 스타일 */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section {
+  /* 가운데 섹션
+    패딩은 상하 70px, 좌우 0px, 메인 박스는 정중앙 */
+  width: 100%;
+  padding: 70px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.papago-container {
+  /* 컨테이너 사이즈 기본 70%, 높이랑 간격 설정 */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 각 열의 너비를 동일 하게 */
+  gap: 30px;
+  width: 70%;
+  min-width: 800px; /* 최소 너비 800px */
+  height: 350px;
+  border-radius: 10px; /* 테두리 모서리 둥글게 */
+}
+
+.papago-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden; /* 콘텐츠가 상자의 영역을 넘어가는 경우, 해당 콘텐츠를 숨기기 */
+  border: 1px solid #ccc;
+}
+
+.papago-header {
+  /* 문장 적는 칸 위 언어 선택하는 헤더 */
+  border-bottom: 0.5px solid rgb(233, 233, 233);
+  width: 100%;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 23px;
+}
+
+.papago-header span {
+  /* 파파고 헤더 안 텍스트*/
+  font-size: 18px;
+  font-weight: 500;
+  color: #3c3c3c;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.papago-header button {
+  /* 언어 전환 버튼 */
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 30px;
+  color: #474747;
+  background: none;
+  border: none;
+  padding: 0px;
+}
+
+.papago-header span:hover,
+.papago-header button:hover {
+  /* 마우스를 올렸을 때 속성 값을 변경 */
+  color: #21dc6d;
+}
+
+.papago-textarea {
+  /* textarea를 감싸는 div
+    0/3000 문자 고정 */
+  width: 100%;
+  height: 65.5%;
+  position: relative;
+}
+
+.papago-textarea textarea {
+  /* textarea 크기 꽉차게, 테두리 X */
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b1b1b;
+  outline: none;
+  resize: none;
+  background-color: white;
+}
+
+.papago-textarea span {
+  /* 현재 입력한 글자수 */
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  font-size: 18px;
+  color: #bbbbbb;
+}
+
+.papago-footer {
+  /* 파파고 박스 푸터 가로 배치 */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 0.5px solid rgb(233, 233, 233);
+}
+
+.papago-footer ul {
+  /* 가로로 배치, 교차축 중앙 배치 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.papago-footer ul li {
+  /* 아이콘 중앙 배치 */
+  cursor: pointer;
+  width: 150x;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.5px solid rgb(233, 233, 233);
+}
+
+.papago-footer ul li img {
+  /* 높이가 너비 크기 자동으로 맞춰지게하기 */
+  width: 35%;
+  height: auto;
+}
+
+.papago-footer button {
+  /* 번역하기 버튼 */
+  border: none;
+  background-color: #21dc6d;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  padding: 0px 25px;
+}
