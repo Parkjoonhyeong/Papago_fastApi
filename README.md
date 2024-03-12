@@ -17,5 +17,3 @@ git remote add origin https://github.com/Parkjoonhyeong/Papago_fastApi.git
 git branch -M main
 
 git push -u origin main
-"# Papago_fastApi" 
-"# Papago_fastApi" 
